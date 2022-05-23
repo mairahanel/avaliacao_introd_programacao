@@ -93,6 +93,31 @@ button:hover {
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+    display: inline-block;
+}
+
+#button-atualizar {
+    font-size: 15px;
+    color: white;
+    background-color: #4169e1;
+    border-color: #4169e1;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#button-cancelar {
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    border-color: red;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
 }
 
 #button-salvar:hover {
@@ -168,7 +193,7 @@ button:hover {
 
 .posicionamento-home {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 50px;
     font-size: 15px;
     color: #1C1C1C;

@@ -15,12 +15,13 @@ formulario.addEventListener('submit', (e) => {
     salvar();
 })
 
+
 document.addEventListener('DOMContentLoaded', pegarDadosStorage);
+botaoCancelar.addEventListener('click', cancelarEdicao);
 
 function salvar(){
     let listaRecados = JSON.parse(localStorage.getItem
     ('meus_recados')) || [];
-
 
     let descricao = inputDescricao.value;
     let detalhamento = inputDetalhamento.value;
@@ -51,13 +52,12 @@ function salvarNaTabela(dadosRecado){
     let colunaDetalhamento = document.createElement('td');
     let colunaAcoes = document.createElement('td');
 
-    
 
     colunaId.innerHTML = `${i}`;
     colunaDescricao.innerHTML = dadosRecado.descricao;
     colunaDetalhamento.innerHTML = dadosRecado.detalhamento;
     colunaAcoes.innerHTML = `
-                                <button class="button-editar">Editar</button>
+                                <button class="button-editar" onclick="prepararEdicao(${dadosRecado.colunaId})">Editar</button>
                                 <button class="button-apagar">Apagar</button>
 
                             `
@@ -92,7 +92,29 @@ function pegarDadosStorage(){
 
 //BOTÃO EDITAR RECADO E CANCELAR RECADO
 
+function atualizarRecado(colunaId){
+    alert(colunaId);
+}
 
+function cancelarEdicao(){
+    alert('Cancelou');
+}
+
+function prepararEdicao(colunaId){
+    botaoSalvar.setAttribute('style', 'display: none');
+    botaoAtualizar.setAttribute('style', 'display: inline-block');
+    botaoCancelar.setAttribute('style', 'display: inline-block');
+
+    //alert(`O registro que quero editar é o ${colunaId}`);
+
+    let listaRecados = JSON.parse(localStorage.getItem('meus_recados'));
+    let recadoEncontrado = listaRecados.find((recado) => {
+        recado.id == colunaId
+    })
+
+    inputDescricao.value = recadoEncontrado.descricao;
+    inputDetalhamento.value = recadoEncontrado.detalhamento;
+}
 
 
 
