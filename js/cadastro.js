@@ -8,24 +8,26 @@ let inputSenhaCadastro2 = document.querySelector('#input-senha-cadastro2');
 formCadastro.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let email_cadastrar = inputEmailCadastro.value;
-    let senha_cadastrar = inputSenhaCadastro.value;
+    let login = inputEmailCadastro.value;
+    let senha = inputSenhaCadastro.value;
     let senha_verificar = inputSenhaCadastro2.value;
 
     let usuario = {
-        email_cadastrar,
-        senha_cadastrar,
+        login,
+        senha,
         senha_verificar
     }
 
-    if(senha_cadastrar == senha_verificar){
+    if(login === "" || senha === "" || senha_verificar === ""){
+        alert('Todos os campos precisam ser preenchidos')
+    }else if(senha == senha_verificar){
         inserirUsuario(usuario);
         limparCamposCadastro();
         alert("Cadastro realizado com sucesso!");
         window.location.href = "login.html";
     }else{
         alert("Algo deu errado! Verifique se todos os campos estão preenchidos corretamente.")
-    }})
+    }});
 
 
 function inserirUsuario(usuario){

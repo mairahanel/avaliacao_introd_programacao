@@ -12,17 +12,17 @@ function logar(){
 
     let usuarios = [];
 
+    usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
     let usuarioValidar = {
-        email: '',
-        senha: ''
+        email: "",
+        senha: ""
     }
 
-    usuarios = JSON.parse(localStorage.getItem('usuarios'));
-
     usuarios.forEach((elemento) => {
-        if(elemento.email === login.value && elemento.senha === senha.value){
+        if(elemento.login === login.value && elemento.senha === senha.value){
             usuarioValidar = {
-                email: elemento.email,
+                email: elemento.login,
                 senha: elemento.senha
             }
         }

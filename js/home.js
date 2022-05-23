@@ -42,6 +42,8 @@ function salvarNoLocalStorage(listaRecados){
     (listaRecados));
 }
 
+let i = 1;
+
 function salvarNaTabela(dadosRecado){
     let novaLinha = document.createElement('tr');
     let colunaId = document.createElement('td');
@@ -49,8 +51,9 @@ function salvarNaTabela(dadosRecado){
     let colunaDetalhamento = document.createElement('td');
     let colunaAcoes = document.createElement('td');
 
+    
 
-    //colunaId.innerHTML = dadosRecado.id;
+    colunaId.innerHTML = `${i}`;
     colunaDescricao.innerHTML = dadosRecado.descricao;
     colunaDetalhamento.innerHTML = dadosRecado.detalhamento;
     colunaAcoes.innerHTML = `
@@ -65,6 +68,8 @@ function salvarNaTabela(dadosRecado){
     novaLinha.appendChild(colunaAcoes);
     
     tabelaRegistros.appendChild(novaLinha);
+
+    i++ 
 }
 
 function limparCamposHome(){
@@ -95,9 +100,8 @@ function pegarDadosStorage(){
 
 
 //VERIFICANDO SE A PESSOA ESTÁ LOGADA
-/*let sessao = sessionStorage.getItem('logado');
+let sessao = sessionStorage.getItem('logado');
 
-//fazer o botão**
 document.querySelector('#sair').addEventListener('click', () => {
     sair();
 })
@@ -117,4 +121,4 @@ function logadoNaHome(){
     if(!sessao){
         window.location.href = 'login.html';
     }
-}*/
+}

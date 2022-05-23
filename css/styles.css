@@ -30,6 +30,10 @@ section.segunda-coluna {
     background-color: #F5F5DC;
 }
 
+#form-recados {
+    margin-left: 30px;
+}
+
 p {
     font-size: small;
     color: #1C1C1C;
@@ -100,13 +104,20 @@ button:hover {
     display:inline;
     font-size: 10x;
     color: white;
-    background-color: blue;
+    background-color: blueviolet;
     border: none;
     margin-top: 20px;
     width: 80px;
     height: 30px;
+    margin-bottom: 0%;
+    margin-top: 0%;
     border-radius: 15px;
     cursor: pointer;
+}
+
+.button-editar:hover {
+    background-color: white;
+    color: blueviolet;
 }
 
 .button-apagar {
@@ -117,6 +128,27 @@ button:hover {
     border: none;
     width: 80px;
     height: 30px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-apagar:hover {
+    background-color: white;
+    color: red;
+}
+
+#sair {
+    font-size: 15px;
+    color: white;
+    background-color: #FF6347;
+    border: none;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    margin-top: 5px;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -143,6 +175,7 @@ button:hover {
 }
 
 .input-descricao {
+    margin-top: 30px;
     width: 400px;
     height: 30px;
 }
@@ -166,7 +199,7 @@ table {
     margin-top: 20px;
     border-collapse: collapse;
     width: 100%;
-    margin-left: 20px;
+    margin-left: 50px;
 }
   
 th, td {
