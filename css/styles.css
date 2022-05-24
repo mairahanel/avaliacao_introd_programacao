@@ -45,6 +45,7 @@ p {
     text-align: center;
 }
 
+
 input.input-login {
     width: 250px;
     height: 40px;
@@ -87,8 +88,8 @@ button:hover {
 #button-salvar {
     font-size: 15px;
     color: white;
-    background-color: #4169e1;
-    border-color: #4169e1;
+    background-color:#3CB371;
+    border-color: #3CB371;
     width: 100px;
     height: 30px;
     border-radius: 5px;
@@ -121,15 +122,15 @@ button:hover {
 }
 
 #button-salvar:hover {
-    background-color: #809aeb;
-    border-color: #809aeb;
+    background-color: #90EE90;
+    border-color: #90EE90;
 }
 
 .button-editar {
     display:inline;
     font-size: 10x;
     color: white;
-    background-color: blueviolet;
+    background-color: #4169e1;
     border: none;
     margin-top: 20px;
     width: 80px;
@@ -142,7 +143,7 @@ button:hover {
 
 .button-editar:hover {
     background-color: white;
-    color: blueviolet;
+    color: #4169e1;
 }
 
 .button-apagar {
@@ -194,9 +195,16 @@ button:hover {
 .posicionamento-home {
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 0%;
     margin-bottom: 50px;
     font-size: 15px;
     color: #1C1C1C;
+}
+
+.input-id {
+    margin-top: 30px;
+    width: 70px;
+    height: 30px;
 }
 
 .input-descricao {
@@ -206,7 +214,7 @@ button:hover {
 }
 
 .input-detalhamento {
-    width: 700px;
+    width: 600px;
     height: 30px;
 }
 

@@ -39,6 +39,7 @@ function inserirUsuario(usuario){
     localStorage.setItem('usuarios', JSON.stringify(banco_usuarios));
 }
 
+
 function limparCamposCadastro(){
     inputEmailCadastro.value = "";
     inputSenhaCadastro.value = "";

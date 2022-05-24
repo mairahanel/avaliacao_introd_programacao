@@ -6,6 +6,7 @@ document.querySelector('#logar').addEventListener('click', (e) =>{
     logar();
 })
 
+
 function logar(){
     let login = document.querySelector('#input-email-login');
     let senha = document.querySelector('#input-senha-login');
